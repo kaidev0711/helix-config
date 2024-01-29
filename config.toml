@@ -107,7 +107,8 @@ n = ":new"
 w = ":write"
 r = [":w", ":config-reload"]
 o = ":config-open"
-l = ":o ~/.config/helix/languages.toml" 
+s = ":o ~/.config/helix/languages.toml" 
+l = ":log-open"
   
 [keys.insert]
 j = { k = "normal_mode" } # Maps `jk` to exit insert mode
