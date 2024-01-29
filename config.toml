@@ -27,29 +27,19 @@ character = "╎"
 render = true
 skip-levels = 1
 
+[editor.whitespace]
+render = "all"
+
 [editor.soft-wrap]
 enable=true
-
+max-wrap = 25  
+max-indent-retain = 0
+wrap-indicator = ""   
 
 [editor.file-picker]
 hidden = false
 parents = false
 git-ignore = false
-
-# [editor.whitespace]
-# render = "all"
-# or control each character
-# [editor.whitespace.render]
-# space = "all"
-# tab = "all"
-# newline = "none"
-
-# [editor.whitespace.characters]
-# space = "·"
-# nbsp = "⍽"
-# tab = "→"
-# newline = "⏎"
-# tabpad = "·" # Tabs will look like "→···" (depending on tab width)
 
 
 [editor.statusline]
@@ -64,6 +54,7 @@ mode.select = "SELECT"
 [editor.lsp]
 # auto-signature-help = true
 # display-signature-help-docs = true
+auto-signature-help = false
 display-messages = true
 display-inlay-hints = true
 
@@ -109,7 +100,7 @@ r = [":w", ":config-reload"]
 o = ":config-open"
 s = ":o ~/.config/helix/languages.toml" 
 l = ":log-open"
-  
+t = ":toggle lsp.display-inlay-hints"
 [keys.insert]
 j = { k = "normal_mode" } # Maps `jk` to exit insert mode
 k = { j = "normal_mode" }
